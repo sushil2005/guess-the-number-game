@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess The Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-card">
+      <h1 class="title">Guess The Number</h1>
+      <p class="subtitle">Guess a number between 1 and 100</p>
+
+      <form id="guess-form" class="guess-form" onsubmit="return false;">
+        <input
+          type="number"
+          id="guess-input"
+          class="guess-input"
+          placeholder="Enter a number"
+          min="1"
+          max="100"
+          autocomplete="off"
+          aria-label="Guess a number between 1 and 100"
+        />
+        <button type="submit" id="guess-btn" class="btn btn-guess">Guess</button>
+      </form>
+
+      <div id="result-message" class="result-message" role="status" aria-live="polite"></div>
+
+      <div class="attempts-container">
+        Attempts: <span id="attempts-count">0</span>
+      </div>
+
+      <button type="button" id="new-game-btn" class="btn btn-new-game">New Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
